@@ -21,12 +21,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/consensus/ethash"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/crypto"
+	"github.com/hptec/go-ethereum/params"
+	"github.com/hptec/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
 )
 

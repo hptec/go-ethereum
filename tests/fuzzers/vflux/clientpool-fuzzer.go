@@ -24,14 +24,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/les/vflux"
-	vfs "github.com/ethereum/go-ethereum/les/vflux/server"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/hptec/go-ethereum/common/mclock"
+	"github.com/hptec/go-ethereum/ethdb/memorydb"
+	"github.com/hptec/go-ethereum/les/vflux"
+	vfs "github.com/hptec/go-ethereum/les/vflux/server"
+	"github.com/hptec/go-ethereum/log"
+	"github.com/hptec/go-ethereum/p2p/enode"
+	"github.com/hptec/go-ethereum/p2p/enr"
+	"github.com/hptec/go-ethereum/rlp"
 )
 
 var (

@@ -21,12 +21,12 @@ import (
 	"sync"
 
 	"github.com/VictoriaMetrics/fastcache"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/core/rawdb"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/ethdb"
+	"github.com/hptec/go-ethereum/rlp"
+	"github.com/hptec/go-ethereum/trie"
 )
 
 // diskLayer is a low level persistent snapshot built on top of a key-value store.

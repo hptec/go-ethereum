@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/common/hexutil"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/log"
+	"github.com/hptec/go-ethereum/rlp"
+	"github.com/hptec/go-ethereum/trie"
 )
 
 // DumpConfig is a set of options to control what portions of the state will be

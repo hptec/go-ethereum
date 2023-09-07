@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/bitutil"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p/rlpx"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/common/bitutil"
+	"github.com/hptec/go-ethereum/metrics"
+	"github.com/hptec/go-ethereum/p2p/rlpx"
+	"github.com/hptec/go-ethereum/rlp"
 )
 
 const (
@@ -126,12 +126,12 @@ func (t *rlpxTransport) close(err error) {
 	t.conn.Close()
 }
 
-func (t *rlpxTransport) doEncHandshake(prv *ecdsa.PrivateKey) (*ecdsa.PublicKey, error) {
+func (t *rlpxTransport) DoEncHandshake(prv *ecdsa.PrivateKey) (*ecdsa.PublicKey, error) {
 	t.conn.SetDeadline(time.Now().Add(handshakeTimeout))
 	return t.conn.Handshake(prv)
 }
 
-func (t *rlpxTransport) doProtoHandshake(our *protoHandshake) (their *protoHandshake, err error) {
+func (t *rlpxTransport) DoProtoHandshake(our *protoHandshake) (their *protoHandshake, err error) {
 	// Writing our handshake happens concurrently, we prefer
 	// returning the handshake read error. If the remote side
 	// disconnects us early with a valid reason, we should return it

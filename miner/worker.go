@@ -24,19 +24,19 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc/eip1559"
-	"github.com/ethereum/go-ethereum/consensus/misc/eip4844"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/txpool"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/consensus"
+	"github.com/hptec/go-ethereum/consensus/misc/eip1559"
+	"github.com/hptec/go-ethereum/consensus/misc/eip4844"
+	"github.com/hptec/go-ethereum/core"
+	"github.com/hptec/go-ethereum/core/state"
+	"github.com/hptec/go-ethereum/core/txpool"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/core/vm"
+	"github.com/hptec/go-ethereum/event"
+	"github.com/hptec/go-ethereum/log"
+	"github.com/hptec/go-ethereum/params"
+	"github.com/hptec/go-ethereum/trie"
 )
 
 const (
@@ -1107,7 +1107,7 @@ func (w *worker) commit(env *environment, interval func(), update bool, start ti
 			interval()
 		}
 		// Create a local environment copy, avoid the data race with snapshot state.
-		// https://github.com/ethereum/go-ethereum/issues/24299
+		// https://github.com/hptec/go-ethereum/issues/24299
 		env := env.copy()
 		// Withdrawals are set to nil here, because this is only called in PoW.
 		block, err := w.engine.FinalizeAndAssemble(w.chain, env.header, env.state, env.txs, nil, env.receipts, nil)

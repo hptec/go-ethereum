@@ -23,14 +23,14 @@ import (
 	"io"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie/trienode"
-	"github.com/ethereum/go-ethereum/trie/triestate"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/core/rawdb"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/crypto"
+	"github.com/hptec/go-ethereum/log"
+	"github.com/hptec/go-ethereum/rlp"
+	"github.com/hptec/go-ethereum/trie/trienode"
+	"github.com/hptec/go-ethereum/trie/triestate"
 )
 
 var (

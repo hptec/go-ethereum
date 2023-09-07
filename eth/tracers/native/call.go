@@ -22,12 +22,12 @@ import (
 	"math/big"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/tracers"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/hptec/go-ethereum/accounts/abi"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/common/hexutil"
+	"github.com/hptec/go-ethereum/core/vm"
+	"github.com/hptec/go-ethereum/eth/tracers"
+	"github.com/hptec/go-ethereum/log"
 )
 
 //go:generate go run github.com/fjl/gencodec -type callFrame -field-override callFrameMarshaling -out gen_callframe_json.go

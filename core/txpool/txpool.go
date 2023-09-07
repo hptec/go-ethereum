@@ -22,12 +22,12 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/core"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/event"
+	"github.com/hptec/go-ethereum/log"
+	"github.com/hptec/go-ethereum/metrics"
 )
 
 // TxStatus is the current status of a transaction as seen by the pool.

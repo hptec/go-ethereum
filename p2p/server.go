@@ -28,16 +28,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/p2p/nat"
-	"github.com/ethereum/go-ethereum/p2p/netutil"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/common/mclock"
+	"github.com/hptec/go-ethereum/crypto"
+	"github.com/hptec/go-ethereum/event"
+	"github.com/hptec/go-ethereum/log"
+	"github.com/hptec/go-ethereum/p2p/discover"
+	"github.com/hptec/go-ethereum/p2p/enode"
+	"github.com/hptec/go-ethereum/p2p/enr"
+	"github.com/hptec/go-ethereum/p2p/nat"
+	"github.com/hptec/go-ethereum/p2p/netutil"
 	"golang.org/x/exp/slices"
 )
 
@@ -243,8 +243,8 @@ type conn struct {
 
 type transport interface {
 	// The two handshakes.
-	doEncHandshake(prv *ecdsa.PrivateKey) (*ecdsa.PublicKey, error)
-	doProtoHandshake(our *protoHandshake) (*protoHandshake, error)
+	DoEncHandshake(prv *ecdsa.PrivateKey) (*ecdsa.PublicKey, error)
+	DoProtoHandshake(our *protoHandshake) (*protoHandshake, error)
 	// The MsgReadWriter can only be used after the encryption
 	// handshake has completed. The code uses conn.id to track this
 	// by setting it to a non-nil value after the encryption handshake.
@@ -967,7 +967,7 @@ func (srv *Server) setupConn(c *conn, flags connFlag, dialDest *enode.Node) erro
 	}
 
 	// Run the RLPx handshake.
-	remotePubkey, err := c.doEncHandshake(srv.PrivateKey)
+	remotePubkey, err := c.DoEncHandshake(srv.PrivateKey)
 	if err != nil {
 		srv.log.Trace("Failed RLPx handshake", "addr", c.fd.RemoteAddr(), "conn", c.flags, "err", err)
 		return fmt.Errorf("%w: %v", errEncHandshakeError, err)
@@ -985,7 +985,7 @@ func (srv *Server) setupConn(c *conn, flags connFlag, dialDest *enode.Node) erro
 	}
 
 	// Run the capability negotiation handshake.
-	phs, err := c.doProtoHandshake(srv.ourHandshake)
+	phs, err := c.DoProtoHandshake(srv.ourHandshake)
 	if err != nil {
 		clog.Trace("Failed p2p handshake", "err", err)
 		return fmt.Errorf("%w: %v", errProtoHandshakeError, err)

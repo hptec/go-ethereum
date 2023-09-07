@@ -23,8 +23,8 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p/simulations/pipes"
+	"github.com/hptec/go-ethereum/crypto"
+	"github.com/hptec/go-ethereum/p2p/simulations/pipes"
 )
 
 func TestProtocolHandshake(t *testing.T) {
@@ -50,7 +50,7 @@ func TestProtocolHandshake(t *testing.T) {
 		defer wg.Done()
 		defer fd0.Close()
 		frame := NewRLPX(fd0, &prv1.PublicKey)
-		rpubkey, err := frame.doEncHandshake(prv0)
+		rpubkey, err := frame.DoEncHandshake(prv0)
 		if err != nil {
 			t.Errorf("dial side enc handshake failed: %v", err)
 			return
@@ -60,7 +60,7 @@ func TestProtocolHandshake(t *testing.T) {
 			return
 		}
 
-		phs, err := frame.doProtoHandshake(hs0)
+		phs, err := frame.DoProtoHandshake(hs0)
 		if err != nil {
 			t.Errorf("dial side proto handshake error: %v", err)
 			return
@@ -76,7 +76,7 @@ func TestProtocolHandshake(t *testing.T) {
 		defer wg.Done()
 		defer fd1.Close()
 		rlpx := NewRLPX(fd1, nil)
-		rpubkey, err := rlpx.doEncHandshake(prv1)
+		rpubkey, err := rlpx.DoEncHandshake(prv1)
 		if err != nil {
 			t.Errorf("listen side enc handshake failed: %v", err)
 			return
@@ -86,7 +86,7 @@ func TestProtocolHandshake(t *testing.T) {
 			return
 		}
 
-		phs, err := rlpx.doProtoHandshake(hs1)
+		phs, err := rlpx.DoProtoHandshake(hs1)
 		if err != nil {
 			t.Errorf("listen side proto handshake error: %v", err)
 			return

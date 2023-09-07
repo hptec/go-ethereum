@@ -20,12 +20,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/hptec/go-ethereum/common"
+	"github.com/hptec/go-ethereum/common/mclock"
+	"github.com/hptec/go-ethereum/core/forkid"
+	"github.com/hptec/go-ethereum/core/types"
+	"github.com/hptec/go-ethereum/light"
+	"github.com/hptec/go-ethereum/p2p"
 )
 
 // clientHandler is responsible for receiving and processing all incoming server
