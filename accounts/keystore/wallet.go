@@ -19,7 +19,7 @@ package keystore
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/accounts"
 	"github.com/hptec/go-ethereum/core/types"
 	"github.com/hptec/go-ethereum/crypto"

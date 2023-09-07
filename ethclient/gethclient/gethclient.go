@@ -25,7 +25,7 @@ import (
 	"runtime"
 	"runtime/debug"
 
-	"github.com/ethereum/go-ethereum"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/common"
 	"github.com/hptec/go-ethereum/common/hexutil"
 	"github.com/hptec/go-ethereum/core/types"

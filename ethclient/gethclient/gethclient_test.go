@@ -23,7 +23,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/common"
 	"github.com/hptec/go-ethereum/consensus/ethash"
 	"github.com/hptec/go-ethereum/core"

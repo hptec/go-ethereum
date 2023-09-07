@@ -21,7 +21,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/common"
 	"github.com/hptec/go-ethereum/core/types"
 	"github.com/hptec/go-ethereum/log"

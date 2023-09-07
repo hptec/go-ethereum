@@ -30,8 +30,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
 	"github.com/gorilla/websocket"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/common"
 	"github.com/hptec/go-ethereum/common/mclock"
 	"github.com/hptec/go-ethereum/consensus"

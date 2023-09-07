@@ -25,7 +25,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/common"
 	"github.com/hptec/go-ethereum/core/rawdb"
 	"github.com/hptec/go-ethereum/core/state/snapshot"

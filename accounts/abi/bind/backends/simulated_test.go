@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/accounts/abi"
 	"github.com/hptec/go-ethereum/accounts/abi/bind"
 	"github.com/hptec/go-ethereum/common"

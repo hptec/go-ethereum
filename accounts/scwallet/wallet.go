@@ -33,8 +33,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
 	pcsc "github.com/gballet/go-libpcsclite"
+	"github.com/hptec/go-ethereum"
 	"github.com/hptec/go-ethereum/accounts"
 	"github.com/hptec/go-ethereum/common"
 	"github.com/hptec/go-ethereum/core/types"
